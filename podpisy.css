@@ -1,0 +1,49 @@
+body{}
+.title {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+ 
+.title img {
+    display: block;
+    transition: all .6s ease-in-out;
+    width: 20em;
+}
+ 
+.title:before, .title:after {
+    content: '';
+    position: absolute;
+    text-align: center;
+    transition: all .6s ease-in-out;
+}
+ 
+ 
+.title:after {
+    content: attr(data-title);
+    line-height: 1.5em;
+ 	overflow: hidden;
+ 
+}
+
+.title.corner:before {
+	border: 1em solid transparent;
+	border-top-color: red;
+	border-left-color: red;
+ 
+}
+ 
+.title.corner:hover:before {
+ 	border-width: 5em 12em;
+}
+ 
+.title.corner:after {
+ 	opacity: 0;
+ 	top: 0px;
+ 	padding-left: 1.5em;
+ 	text-align: left;
+}
+ 
+.title.corner:hover:after {
+ opacity: 1;
+}
